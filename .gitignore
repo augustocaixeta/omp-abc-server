@@ -1,0 +1,29 @@
+# The compiled gamemode. Built from the sources next to it, and a binary in a
+# diff tells nobody anything.
+*.amx
+
+# The server itself, not the thing being written. Everything here arrives with
+# open.mp and is replaced by upgrading it, not by editing it.
+/components/
+/plugins/
+/models/
+/scriptfiles/
+*.exe
+*.pdb
+*.dll
+
+# The compiler and its toolchain came with the server. The includes did not:
+# I/ is the framework and the loose .inc files are libraries written for it.
+/qawno/*
+!/qawno/include/
+
+# Written by the server as it runs.
+log.txt
+bans.json
+
+# Carries the rcon password. server.cfg and the rest of the settings belong to
+# whoever is running it, not to the gamemode.
+/config.json
+
+# Profiler output, written by a run rather than by anybody.
+/gamemodes/main-profile.html
